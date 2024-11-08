@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kazakhstan Travel Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="body">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li class="dropdown">
+          <a href="#">Cities</a>
+          <div class="dropdown-content">
+            <a href="astana.html">Astana</a>
+            <a href="#">Almaty</a>
+            <a href="#">Shymkent</a>
+            <a href="#">Aktobe</a>
+            <a href="#">Karagandy</a>
+            <a href="#">Taraz</a>
+            <a href="#">Semei</a>
+            <a href="#">Atyrau</a>
+            <a href="#">Pavlodar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Routes</a>
+          <div class="dropdown-content">
+            <a href="#">Car</a>
+            <a href="#">Bus</a>
+            <a href="#">Bicycle</a>
+            <a href="#">Hiking</a>
+          </div>
+        </li>
+        <li><a href="faq.html">Help</a></li>
+        <li class="dropdown">
+          <button id="color-change-btn">Choose Color</button>
+          <div class="dropdown-content">
+            <a href="#" class="color-option" data-color="#ffffff" style="color: #757575;">White</a>
+            <a href="#" class="color-option" data-color="#65e87d" style="color: #65e87d;">Green</a>
+            <a href="#" class="color-option" data-color="#3985dd" style="color: #3985dd;">Blue</a>
+            <a href="#" class="color-option" data-color="#33f3ff" style="color: #33f3ff;">Cyan</a>
+            <a href="#" class="color-option" data-color="#000000" style="color: #000000;">Black</a>
+          </div>
+        <li>
+          <div class="search-container">
+          <img src="htmlfiles/icons/icons8-search-50.png" alt="Search" class="search-icon">
+          <div class="filter-options">
+              <p class="filter-option" data-section="general-info">General Information</p>
+              <p class="filter-option" data-section="how-to-get">How to Get to Kazakhstan</p>
+              <p class="filter-option" data-section="clothing">Clothing Recommendations</p>
+              <p class="filter-option" data-section="food">Food</p>
+          </div>
+          </div>
+        </li>
+        
+        <li><a href="#"><img src="htmlfiles/icons/icons8-globus-setka-50.png" alt="Language" class="icon"></a></li>
+        <li><a href="#"><img src="htmlfiles/icons/icons8-person-48.png" alt="Login" class="icon"></a></li>
+        <div id="loginPopup" class="popup-form">
+          <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2 class="login-popup">Login</h2>
+          <form id="loginForm">
+              <label for="email">Email:</label>
+              <input id="email" name="email" placeholder="Enter your email">
+              <div class="error-message" id="emailError"></div>
+              
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
+              <div class="error-message" id="passwordError"></div>
+
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+              <div class="error-message" id="confirmPasswordError"></div>
+  
+              <button type="submit">Login</button>
+              <p><a href="register.html">Create account</a></p>
+            </form>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <div class="header-image">
+      <h1>Travel Guide to Kazakhstan</h1>
+    </div>
+  </header>
+  
+  <main>
+    <section data-section="general-info">
+      <h2 class="titles">General Information about Kazakhstan</h2>
+        <figure>
+            <img src="https://avatars.mds.yandex.net/i?id=540fb3e8b2faa0a37a0d5245163f4d2b_l-10577947-images-thumbs&n=13" alt="Food image 1" class="title-image">
+        </figure>
+        <ul class="no-bullets">
+        <li><strong>Capital:</strong> Astana</li>
+        <li><strong>Area:</strong> 2,725,000 square kilometers</li>
+        <li><strong>Population:</strong> 20.1 million people</li>
+        <li><strong>Languages:</strong> Kazakh (state), Russian (official)</li>
+        <li><strong>Religion:</strong> Islam 70%, Christianity 26%, Other 4%</li>
+        <li><strong>Electricity:</strong> 220V AC, 50A</li>
+        <li><strong>Internet Zone:</strong> .kz</li>
+        <li><strong>International telephone code:</strong> +7</li>
+        <li><strong>Monetary unit:</strong> Tenge</li>
+        <li><strong>Time zone:</strong> UTC +5</li>
+        <li><p><strong>Current date and time in Kazakhstan: </strong><span id="date-time"></span></p></li>
+      </ul>
+      <p>Kazakhstan, where ancient traditions and modernity coexist in harmony, is located in the center of Eurasia. The country is famous for its vast southern steppes, mountains and lakes, the Baikonur Cosmodrome and the heritage of the Great Silk Road. A tourist coming to Kazakhstan will certainly have something to do: ethnic tours, ecotours, hunting, fishing, mountaineering and much more.</p>
+      <p>My guide to Kazakhstan will help you to learn more about this beautiful country.</p>
+      
+      <ol class="scroll-list">
+        <li><a href="#get-to-kz">How to Get to Kazakhstan</a></li>
+        <li><a href="#clothing">Clothing for Traveling to Kazakhstan</a></li>
+        <li><a href="#food">The Main Thing about Food in Kazakhstan</a></li>
+        <li><a href="#souvenirs">What to bring from Kazakhstan</a></li>
+      </ol>
+    </section>
+
+    <section id="get-to-kz" data-section="how-to-get">
+      <h2>How to Get to Kazakhstan</h2>
+      <p>The easiest and most comfortable way to get to Kazakhstan is to fly to Astana or Almaty - many international companies operate such flights.</p>
+      <p>Traveling to Kazakhstan by train is suitable mainly for residents of Russia, the trip in this case will last more than a day. In addition, Kazakhstan can be reached by car from neighboring countries: from Uzbekistan, Kyrgyzstan and China - to Almaty and Shymkent, and from Russia - to all northern cities of Kazakhstan (including Astana).</p>
+      <figure>
+        <img src="https://avatars.mds.yandex.net/i?id=48847d8b061589cee61800a16cefe59b_l-5016868-images-thumbs&n=13" alt="Travel image 1" class="featured-image">
+        <img src="https://intourist.ru/media/gallery/S1400x1400/f9829311-237a-4269-8232-ab55a24dc795_20231221080850_53841.jpg" alt="Travel image 2" class="featured-image">
+      </figure>
+    </section>
+
+    <section id="clothing" data-section="clothing">
+      <h2>Clothing for Traveling to Kazakhstan</h2>
+      <p>Kazakhstan has a sharp continental climate, so it is very cold in winter and very hot in summer. Choose your clothes according to the season, in winter take warm clothes, in summer do not forget about sunglasses and hats. Be sure to take a pair of comfortable shoes. It often rains in Kazakhstan, so a small folding umbrella may come in handy on the way.</p>
+      <p>If you plan a trip to the mountains, where it can be cool even in summer, it is worth taking a few warm things with long sleeves. When visiting religious places it is better not to wear shorts, short skirts, T-shirts with open shoulders and in general open clothes.</p>  
+      <p>As for style, in most cases the residents of Kazakhstan give preference to ordinary modern clothes.</p>
+      <figure>
+        <img src="https://sputnik.kz/img/1217/99/12179991_0:0:2871:1623_2072x0_60_0_0_6d26520c80658fe44a9afc175baf3007.jpg" alt="Clothing image 1" class="featured-image">
+        <img src="https://cdn.nur.kz/images/1200x675/5cfa5aa16d9818bf.jpeg?version=1" alt="Clothing image 2" class="featured-image">
+      </figure>
+    </section>
+
+    <section id="food" data-section="food">
+      <h2>The Main Thing about Food in Kazakhstan</h2>
+      <p>The national cuisine of Kazakhstan has been formed over centuries, many recipes are passed down in families by inheritance. The abundance of meat and flour products are distinctive features of Kazakh cuisine. Also dairy drinks are very popular in Kazakhstan: koumiss, shubat, ayran.</p>
+      <p>The national Kazakh cuisine is very hearty, with a predominance of heavy and fatty foods. A lot of national dishes include meat, dough, so in the first days of stay in the country it is worth to be cautious, try not to overeat.</p>
+      <p>In general, Kazakhstan has many types of cuisine, including European and Asian.</p>
+      <figure>
+        <img src="https://avatars.mds.yandex.net/i?id=aa065431659d098acc0971f60d2416618250884f-10933522-images-thumbs&n=13" alt="Food image 1" class="featured-image">
+        <img src="https://i.ytimg.com/vi/lswA6ItGeRw/maxresdefault.jpg" alt="Food image 2" class="featured-image">
+      </figure>
+    </section>
+
+    <section id="souvenirs">
+      <h2>What to bring from Kazakhstan</h2>
+      <p>What to bring with you from Kazakhstan as a reminder of a wonderful trip? Of course, in addition to the standard magnets and items with the symbols of Kazakhstan, it is worth paying attention to various souvenirs made of wood, porcelain and felt. These can be caskets, statuettes, attributes of nomads, covers for daggers or bottles.</p>
+      <p>Colorful oriental sharp-nosed slippers made of felt are very popular among tourists - they are beautiful, cozy and warm. As a souvenir can be jewelry in the national style, dolls in national Kazakh outfits, leather flasks, sewn from scraps of fabric blanket kurak korpe.</p>
+      <p>Fans of gastronomic trophies can bring from Kazakhstan meat delicacy kazy (preferably in vacuum packaging) or chocolate.</p>
+      <figure>
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/5194534/pub_628de0d503f81f005e4000b1_6295eb0356f5e12ae8c5039b/scale_1200" alt="Souvenir image 1" class="featured-image">
+        <img src="https://i0.photo.2gis.com/images/branch/68/9570149219135370_4358.jpg" alt="Souvenir image 2" class="featured-image">
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed by Zakir Aripzhanov | 2024</p>
+    <p>Contact: zakir.itsme@gmail.com | +7 771 847 27 26</p>
+    <div class="social-media-icons">
+      <a href="https://www.instagram.com"><img src="htmlfiles/icons/icons8-instagram-100.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com"><img src="htmlfiles/icons/icons8-facebook-100.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com"><img src="htmlfiles/icons/icons8-twitter-100.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com"><img src="htmlfiles/icons/icons8-linkedin-100.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

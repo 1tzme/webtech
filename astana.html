@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astana - Kazakhstan Travel Guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="body">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li class="dropdown">
+          <a href="#">Cities</a>
+          <div class="dropdown-content">
+            <a href="astana.html">Astana</a>
+            <a href="#">Almaty</a>
+            <a href="#">Shymkent</a>
+            <a href="#">Aktobe</a>
+            <a href="#">Karagandy</a>
+            <a href="#">Taraz</a>
+            <a href="#">Semei</a>
+            <a href="#">Atyrau</a>
+            <a href="#">Pavlodar</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Routes</a>
+          <div class="dropdown-content">
+            <a href="#">Car</a>
+            <a href="#">Bus</a>
+            <a href="#">Bicycle</a>
+            <a href="#">Hiking</a>
+          </div>
+        </li>
+        <li><a href="faq.html">Help</a></li>
+        <li class="dropdown">
+          <button id="color-change-btn">Choose Color</button>
+          <div class="dropdown-content">
+            <a href="#" class="color-option" data-color="#ffffff" style="color: #757575;">White</a>
+            <a href="#" class="color-option" data-color="#65e87d" style="color: #65e87d;">Green</a>
+            <a href="#" class="color-option" data-color="#3985dd" style="color: #3985dd;">Blue</a>
+            <a href="#" class="color-option" data-color="#33f3ff" style="color: #33f3ff;">Cyan</a>
+            <a href="#" class="color-option" data-color="#000000" style="color: #000000;">Black</a>
+          </div>
+        </li>
+        <li><a href="#"><img src="htmlfiles/icons/icons8-search-50.png" alt="Search" class="icon"></a></li>
+        <li><a href="#"><img src="htmlfiles/icons/icons8-globus-setka-50.png" alt="Language" class="icon"></a></li>
+        <li><a href="#"><img src="htmlfiles/icons/icons8-person-48.png" alt="Login" class="icon"></a></li>
+        <div id="loginPopup" class="popup-form">
+          <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2 class="login-popup">Login</h2>
+          <form id="loginForm">
+              <label for="email">Email:</label>
+              <input id="email" name="email" placeholder="Enter your email">
+              <div class="error-message" id="emailError"></div>
+              
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password">
+              <div class="error-message" id="passwordError"></div>
+
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+              <div class="error-message" id="confirmPasswordError"></div>
+  
+              <button type="submit">Login</button>
+              <p><a href="register.html">Create account</a></p>
+          </form>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    <div class="header-image-astana">
+      <h1>Welcome to Astana</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="titles">About Astana</h2>
+      <figure>
+          <img src="https://www.gov.kz/uploads/2023/6/27/f65eb66938025160836cb1cd9b5e7849_original.812863.jpeg" alt="Astana" class="title-image">
+      </figure>
+      <p>Astana, the capital city of Kazakhstan, is a modern and vibrant metropolis with impressive architecture, rich history, and cultural significance. 
+          Known for its futuristic skyline and as a hub for political and economic activity, Astana is a key destination in Kazakhstan.</p>
+      
+      <ul class="no-bullets">
+        <li><strong>Population:</strong> 1.2 million</li>
+        <li><strong>Founded:</strong> 1830</li>
+        <li><strong>Main Language:</strong> Kazakh, Russian</li>
+        <li><strong>Climate:</strong> Continental, cold winters and warm summers</li>
+        <li><strong>Postal code:</strong> 010000</li>
+        <li><strong>Automobile code:</strong> 01</li>
+        <li><strong>Time Zone:</strong> UTC +5</li>
+        <li><button id="show-time-btn" class="astana-page-buttons">Show current time in Astana</button>
+        <p id="astana-time" style="display: none;"></p></li>
+        <li><button id="sound-btn1" class="astana-page-buttons">Sound of Astana 1</button></li>
+        <li><button id="sound-btn2" class="astana-page-buttons">Sound of Astana 2</button></li>
+      </ul>
+
+      <p>Astana is not only the political heart of the country but also a center of innovation and culture. With landmarks such as the Bayterek Tower and the Khan Shatyr Entertainment Center, the city offers a unique blend of tradition and modernity.
+         Tourists can explore its museums, parks, and architectural marvels, while enjoying the city's modern amenities.</p>
+      
+      <ol class="scroll-list">
+        <li><a href="#landmarks">Landmarks in Astana</a></li>
+        <li><a href="#history">History of Astana</a></li>
+        <li><a href="#travel-tips">Travel Tips for Astana</a></li>
+      </ol>
+    </section>
+
+    <section id="landmarks">
+      <h2>Landmarks in Astana</h2>
+      <p>Astana, the modern capital of Kazakhstan, is home to some of the most impressive architectural landmarks in Central Asia.
+          One of the most iconic symbols of the city is the <strong>Bayterek Tower</strong>, a futuristic structure offering stunning panoramic views of the city from its observation deck.
+          <strong>The Palace of Peace and Reconciliation</strong>, designed by famed architect Norman Foster, stands as a symbol of unity, featuring a striking glass pyramid.
+          For a blend of tradition and modernity, visit the <strong>Hazret Sultan Mosque</strong>, one of the largest mosques in Central Asia.
+          Another must-see is <strong>Khan Shatyr</strong>, a massive tent-shaped structure that houses a shopping center, entertainment facilities, and even an indoor beach.
+          Finally, the <strong>Presidential Palace (Ak Orda)</strong> showcases the heart of Kazakhstan’s government and offers insight into the country’s leadership.</p>
+
+      <div id="landmarksCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#landmarksCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Bayterek Tower"></button>
+          <button type="button" data-bs-target="#landmarksCarousel" data-bs-slide-to="1" aria-label="The Palace of Peace and Reconciliation"></button>
+          <button type="button" data-bs-target="#landmarksCarousel" data-bs-slide-to="2" aria-label="Hazret Sultan Mosque"></button>
+          <button type="button" data-bs-target="#landmarksCarousel" data-bs-slide-to="3" aria-label="Khan Shatyr"></button>
+          <button type="button" data-bs-target="#landmarksCarousel" data-bs-slide-to="4" aria-label="Presidential Palace (Ak Orda)"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://avatars.mds.yandex.net/get-altay/9720767/2a000001892ff8d93beff80e844832707b56/orig" class="d-block w-100" alt="Bayterek Tower">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bayterek Tower</h5>
+              <p><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D1%82%D0%B5%D1%80%D0%B5%D0%BA_(%D0%BC%D0%BE%D0%BD%D1%83%D0%BC%D0%B5%D0%BD%D1%82)" class="btn-dark-primary">More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://idei.club/raznoe/uploads/posts/2022-12/1671745091_idei-club-p-dvorets-nezavisimosti-nursultan-dizain-kra-62.jpg" class="d-block w-100" alt="The Palace of Peace and Reconciliation">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>The Palace of Peace and Reconciliation</h5>
+              <p><a href="#" class="btn btn-dark-primary">More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.magput.ru/pics/large/b6d59f3a-94f1-42c1-a1cf-443cf7988e59.jpg" class="d-block w-100" alt="Hazret Sultan Mosque">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Hazret Sultan Mosque</h5>
+              <p><a href="#" class="btn-dark-primary">More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://clonforum.com/uploads/default/original/3X/1/a/1ad4a045555decb73c71fe920fa33d520dbf2af2.jpeg?utm_source=forum.ageofclones.com" class="d-block w-100" alt="Khan Shatyr">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Khan Shatyr</h5>
+              <p><a href="#" class="btn-dark-primary">More</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://avatars.mds.yandex.net/i?id=dfbbe41ab74efa4543b26bb80456d3d4_l-5221140-images-thumbs&n=13" class="d-block w-100" alt="Presidential Palace (Ak Orda)">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Presidential Palace (Ak Orda)</h5>
+              <p><a href="#" class="btn-dark-primary">More</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#landmarksCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#landmarksCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="history">
+      <p></p>
+      <h2>History of Astana</h2>
+      <p>Astana’s history is a unique blend of tradition and rapid modernization. 
+        Originally established in 1830 as a small settlement called Akmolinsk, the city served as a fortress on the northern steppes. 
+        It went through several name changes, including Tselinograd during the Soviet era, reflecting its role as a hub for agricultural development. </p>
+        <p>In 1997, Astana was declared the new capital of Kazakhstan, moving the seat of government from Almaty. 
+        Since then, it has undergone rapid development, transforming from a modest provincial town into a vibrant, modern metropolis. 
+        In 2019, the city was briefly renamed Nur-Sultan in honor of the country's first president, Nursultan Nazarbayev, but returned to its current name Astana in 2022. </p>
+        <p>Today, Astana is a symbol of Kazakhstan’s ambitions on the global stage, combining historical roots with cutting-edge architecture and urban design.</p>
+      <figure>
+        <img src="https://turkistan.citypass.kz/wp-content/uploads/%D1%86%D0%B5%D0%BB%D0%B8%D0%BD%D0%BE%D0%B3%D1%80%D0%B0%D0%B4.jpg" alt="Astana in past" class="featured-image">
+        <img src="https://upload.wikimedia.org/wikipedia/kk/5/5a/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%D2%9B%D0%B0%D0%BB%D0%B0%D1%81%D1%8B_08.jpg" alt="Modern building" class="featured-image">
+      </figure>
+    </section>
+
+    <section id="travel-tips">
+      <h2>Travel Tips for Astana</h2>
+      <p>Astana can be visited year-round, but be prepared for extreme weather conditions. 
+        Winters can be harsh, with temperatures dropping as low as -30°C (-22°F), so pack plenty of warm clothing if you're visiting in colder months. 
+        Summers are warm and pleasant, making it an ideal time for exploring the city on foot. </p>
+        <p>When traveling around the city, the public transportation system is reliable, with buses being the main form of transport. 
+        Taxis are also readily available but ensure that you agree on the fare before the ride. 
+        It’s a good idea to carry cash, as not all places accept credit cards. For those unfamiliar with the language, learning a few basic phrases in Russian or Kazakh can be helpful, though English is increasingly spoken in tourist areas. </p>
+        <p>Lastly, Astana is a city that blends tradition with modernity, so whether you're visiting its historical landmarks or enjoying its shopping centers, respect local customs while enjoying the city’s diverse culture.</p>
+      <figure>
+        <img src="https://time.kz/up_img/1542021844_8fb833ea5c6bc4762d51350a8dfec29c_resize_w_1140_h_696.jpg" alt="Astana weather" class="featured-image">
+        <img src="https://cdn.nur.kz/images/1200x675/00ab8be5557193ee.jpeg?version=1" alt="Astana public transportation" class="featured-image">
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed by Zakir Aripzhanov | 2024</p>
+    <p>Contact: zakir.itsme@gmail.com | +7 771 847 27 26</p>
+    <div class="social-media-icons">
+      <a href="https://www.instagram.com"><img src="htmlfiles/icons/icons8-instagram-100.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com"><img src="htmlfiles/icons/icons8-facebook-100.png" alt="Facebook"></a>
+      <a href="https://www.twitter.com"><img src="htmlfiles/icons/icons8-twitter-100.png" alt="Twitter"></a>
+      <a href="https://www.linkedin.com"><img src="htmlfiles/icons/icons8-linkedin-100.png" alt="LinkedIn"></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
