@@ -8,6 +8,32 @@ acc.forEach((accordion) => {
     });
 });
 
+// Get audio elements
+const audio1 = document.getElementById('audio1');
+const audio2 = document.getElementById('audio2');
+
+// play/pause for audio1
+document.getElementById('audioButton1').addEventListener('click', function() {
+    if (audio1.paused) {
+        audio1.play();
+        this.textContent = 'Pause Astana Sound 1';
+    } else {
+        audio1.pause();
+        this.textContent = 'Play Astana Sound 1';
+    }
+});
+
+// play/pause for audio2
+document.getElementById('audioButton2').addEventListener('click', function() {
+    if (audio2.paused) {
+        audio2.play();
+        this.textContent = 'Play Astana Sound 2';
+    } else {
+        audio2.pause();
+        this.textContent = 'Pause Astana Sound 2';
+    }
+});
+
 // Popup Logic
 const loginIcon = document.querySelector('.icon[alt="Login"]');
 const popup = document.getElementById('loginPopup');
@@ -170,7 +196,7 @@ filterOptions.forEach(option => {
 });
 
 
-const apiKey = 'c6b5f7ee099671aa413318ed3e0a64fb'; // Replace with your API key from OpenWeatherMap
+const apiKey = 'c6b5f7ee099671aa413318ed3e0a64fb';
 const weatherInfo = document.getElementById('weather-info');
 
 async function fetchWeather() {
@@ -180,7 +206,7 @@ async function fetchWeather() {
         const response = await fetch(url);
         const data = await response.json();
         
-        if (data.cod === 200) { // Check for successful response
+        if (data.cod === 200) {
             const temperature = data.main.temp;
             const description = data.weather[0].description;
             weatherInfo.textContent = `Temperature: ${temperature}°C, Conditions: ${description}`;
@@ -192,6 +218,15 @@ async function fetchWeather() {
         weatherInfo.textContent = "Error loading weather information.";
     }
 }
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Astana&appid=c6b5f7ee099671aa413318ed3e0a64fb&units=metric')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('temperature').textContent = `Temperature: ${data.main.temp}°C`;
+        document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
+        document.getElementById('wind').textContent = `Wind Speed: ${data.wind.speed} m/s`;
+        document.getElementById('description').textContent = `Conditions: ${data.weather[0].description}`;
+    })
+    .catch(error => console.error('Error fetching weather data:', error));
 
-// Call fetchWeather when the page loads
+
 window.addEventListener('load', fetchWeather);
