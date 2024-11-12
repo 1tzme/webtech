@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,41 +36,48 @@
           </div>
         </li>
         <li><a href="faq.html">Help</a></li>
-        <li class="dropdown">
-          <button id="color-change-btn">Choose Color</button>
-          <div class="dropdown-content">
-            <a href="#" class="color-option" data-color="#ffffff" style="color: #757575;">White</a>
-            <a href="#" class="color-option" data-color="#65e87d" style="color: #65e87d;">Green</a>
-            <a href="#" class="color-option" data-color="#3985dd" style="color: #3985dd;">Blue</a>
-            <a href="#" class="color-option" data-color="#33f3ff" style="color: #33f3ff;">Cyan</a>
-            <a href="#" class="color-option" data-color="#000000" style="color: #000000;">Black</a>
+        <li><a href="#"><img src="htmlfiles/icons/icons8-change-theme-50.png" alt="Change theme" id="theme-toggle-btn" class="icon"></a></li>
+        <li>
+          <div class="search-container">
+          <img src="htmlfiles/icons/icons8-search-50.png" alt="Search" class="search-icon">
+          <div class="filter-options">
+              <p class="filter-option" data-section="general-info">General Information</p>
+              <p class="filter-option" data-section="how-to-get">How to Get to Kazakhstan</p>
+              <p class="filter-option" data-section="clothing">Clothing Recommendations</p>
+              <p class="filter-option" data-section="food">Food</p>
+          </div>
           </div>
         </li>
-        <li><a href="#"><img src="htmlfiles/icons/icons8-search-50.png" alt="Search" class="icon"></a></li>
-        <li><a href="#"><img src="htmlfiles/icons/icons8-globus-setka-50.png" alt="Language" class="icon"></a></li>
         <li><a href="#"><img src="htmlfiles/icons/icons8-person-48.png" alt="Login" class="icon"></a></li>
         <div id="loginPopup" class="popup-form">
           <div class="popup-content">
-          <span class="close-btn">&times;</span>
-          <h2 class="login-popup">Login</h2>
-          <form id="loginForm">
-              <label for="email">Email:</label>
-              <input id="email" name="email" placeholder="Enter your email">
-              <div class="error-message" id="emailError"></div>
+              <span class="close-btn">&times;</span>
               
-              <label for="password">Password:</label>
-              <input type="password" id="password" name="password" placeholder="Enter your password">
-              <div class="error-message" id="passwordError"></div>
-
-              <label for="confirm-password">Confirm Password:</label>
-              <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
-              <div class="error-message" id="confirmPasswordError"></div>
-  
-              <button type="submit">Login</button>
-              <p><a href="register.html">Create account</a></p>
-          </form>
+              <form id="loginForm" style="display: block;">
+                  <h2 class="logreghead">Login</h2>
+                  <input id="loginEmail" placeholder="Email">
+                  <input id="loginPassword" placeholder="Password">
+                  <button type="submit">Login</button>
+                  <p>Don't have an account? <a href="#" id="createAccountLink">Create Account</a></p>
+              </form>
+              
+              <form id="signupForm" style="display: none;">
+                  <h2 class="logreghead">Sign Up</h2>
+                  <input type="text" id="signupUsername" placeholder="Username">
+                  <input id="signupEmail" placeholder="Email">
+                  <input type="password" id="signupPassword" placeholder="Password">
+                  <input type="password" id="signupConfirmPassword" placeholder="Confirm Password">
+                  <button type="submit">Sign Up</button>
+                  <p><a href="#" id="loginAccountLink">Login</a></p>
+              </form>
+              
+              <div id="userProfile" style="display: none;">
+                  <h2>Welcome, <span id="displayUsername"></span></h2>
+                  <p>Email: <span id="displayEmail"></span></p>
+                  <button id="logoutButton">Logout</button>
+              </div>
           </div>
-        </div>
+      </div>
       </ul>
     </nav>
     <div class="header-image-astana">
@@ -95,10 +102,11 @@
         <li><strong>Postal code:</strong> 010000</li>
         <li><strong>Automobile code:</strong> 01</li>
         <li><strong>Time Zone:</strong> UTC +5</li>
-        <li><button id="show-time-btn" class="astana-page-buttons">Show current time in Astana</button>
-        <p id="astana-time" style="display: none;"></p></li>
-        <li><button id="sound-btn1" class="astana-page-buttons">Sound of Astana 1</button></li>
-        <li><button id="sound-btn2" class="astana-page-buttons">Sound of Astana 2</button></li>
+        <li><strong>Current Time in Astana:</strong><span id="astana-time"></span></li>
+        <li><div id="weather">
+          <p><strong>Current Weather in Astana: </strong><span id="weather-info">Loading weather...</span></p>
+        </div>
+        </li>
       </ul>
 
       <p>Astana is not only the political heart of the country but also a center of innovation and culture. With landmarks such as the Bayterek Tower and the Khan Shatyr Entertainment Center, the city offers a unique blend of tradition and modernity.
