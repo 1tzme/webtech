@@ -191,7 +191,7 @@ footer p {
 /* faq page accordion panel */
 .accordion {
     background-color: #0851a7;
-    color: #001881;
+    color: #ffffff;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -289,6 +289,34 @@ button[type="submit"]:hover {
     color: #0851a7;
     text-align: center;
     margin-top: 10px;
+}
+
+
+/* sound effects */
+.audio-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.audio-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #0e62bc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.2s;
+}
+.audio-btn:hover {
+    transform: scale(1.05);
+}
+
+.audio-btn:hover {
+    background-color: #0056b3;
 }
 
 /* filter option search icon */
@@ -487,3 +515,10 @@ body, html {
       flex-direction: column;
     }
   }
+  .weather-astana {
+    color:#0851a7;
+  }
+
+.weather-opt {
+    color: #4b93e5;
+}
